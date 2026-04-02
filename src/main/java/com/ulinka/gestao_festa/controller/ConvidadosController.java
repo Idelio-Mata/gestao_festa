@@ -14,15 +14,25 @@
 
 package com.ulinka.gestao_festa.controller;
 
+
+import com.ulinka.gestao_festa.repository.ConvidadosRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ConvidadosController {
 
+    @Autowired // Injeta o repositório no controller
+    private ConvidadosRepository convidadosRepository;
+
     @GetMapping("/convidados")
-    public String listar(){
-        return "ListaConvidados";
+    public ModelAndView listar() {
+        ModelAndView modelAndView = new ModelAndView("ListaConvidados");
+        modelAndView.addObject("convidados", convidadosRepository.findAll());
+        return modelAndView;
     }
+
 
 }
