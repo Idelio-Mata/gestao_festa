@@ -60,16 +60,15 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- WebJars (Bootstrap + jQuery) -->
+		<!-- WebJars core (Bootstrap + jQuery) -->
 		<dependency>
 			<groupId>org.webjars</groupId>
-			<artifactId>webjars-locator</artifactId>
-			<version>0.52</version>
+			<artifactId>webjars-locator-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
-			<version>5.3.8</version>
+			<version>5.3.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
